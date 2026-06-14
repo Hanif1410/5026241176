@@ -101,6 +101,7 @@ Route::get('/teh/tambah', [TehController::class, 'create'])->name('teh.create');
 Route::post('/teh/store', [TehController::class, 'store'])->name('teh.store');
 Route::delete('/teh/batal/{id}', [TehController::class, 'destroy'])->name('teh.destroy');
 Route::get('/teh/edit/{kodeteh}', [TehController::class, 'edit'])->name('teh.edit');
+Route::put('/teh/update/{kodeteh}', [TehController::class, 'update'])->name('teh.update');
 
 Route::get('/nilaikuliah', [NilaiKuliahController::class, 'index'])->name('nilaikuliah.index');
 Route::get('/nilaikuliah/tambah', [NilaiKuliahController::class, 'create'])->name('nilaikuliah.create');
