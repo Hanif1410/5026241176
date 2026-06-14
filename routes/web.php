@@ -7,6 +7,8 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\KeranjangBelanjaController;
+use App\Http\Controllers\TehController;
+use App\Http\Controllers\NilaiKuliahController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -93,3 +95,15 @@ Route::get('/keranjang', [KeranjangBelanjaController::class, 'index'])->name('ke
 Route::get('/keranjang/tambah', [KeranjangBelanjaController::class, 'create'])->name('keranjang.create');
 Route::post('/keranjang/store', [KeranjangBelanjaController::class, 'store'])->name('keranjang.store');
 Route::delete('/keranjang/batal/{id}', [KeranjangBelanjaController::class, 'destroy'])->name('keranjang.destroy');
+
+Route::get('/teh', [TehController::class, 'index'])->name('teh.index');
+Route::get('/teh/tambah', [TehController::class, 'create'])->name('teh.create');
+Route::post('/teh/store', [TehController::class, 'store'])->name('teh.store');
+Route::delete('/teh/batal/{id}', [TehController::class, 'destroy'])->name('teh.destroy');
+Route::get('/teh/edit/{kodeteh}', [TehController::class, 'edit'])->name('teh.edit');
+
+Route::get('/nilaikuliah', [NilaiKuliahController::class, 'index'])->name('nilaikuliah.index');
+Route::get('/nilaikuliah/tambah', [NilaiKuliahController::class, 'create'])->name('nilaikuliah.create');
+Route::post('/nilaikuliah/store', [NilaiKuliahController::class, 'store'])->name('nilaikuliah.store');
+Route::delete('/nilaikuliah/batal/{id}', [NilaiKuliahController::class, 'destroy'])->name('nilaikuliah.destroy');
+Route::get('/nilaikuliah/edit/{id}', [NilaiKuliahController::class, 'edit'])->name('nilaikuliah.edit');

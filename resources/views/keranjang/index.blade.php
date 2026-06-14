@@ -4,7 +4,7 @@
 
     <h2>Daftar Keranjang Belanja</h2>
 
-    <a href="{{ route('keranjang.create') }}" class="btn btn-primary">Beli (Tambah Data)</a>
+    <a href="{{ route('keranjang.create') }}" class="btn btn-primary">Beli</a>
 
     <br><br>
 
